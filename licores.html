@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licores - Licorera St. Patrick</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="container nav-container">
+        <div class="brand">
+            <img src="img/logo.png" alt="Logo">
+            <h1>Licorera St. Patrick expres</h1>
+        </div>
+         <a href="index.html" class="btn-inicio">
+            <i class="fa-solid fa-house"></i>
+            Inicio
+</a>
+</header>
+
+<section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h2>Licores Premium</h2>
+        <p>Whisky, ron, vodka, tequila,aguardientes y ginebra.</p>
+    </div>
+</section>
+
+<<section class="productos">
+
+    <h2>Nuestro Catálogo</h2>
+
+    <div class="grid-productos">
+
+        <div class="producto">
+            <img src="img/whisky1.jpg" alt="Whisky">
+            <h3>Black Owl</h3>
+            <p>$13.00</p>
+            <button onclick="agregarCarrito('Black Owl',13.00,'img/whisky1.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/whisky2.jpg" alt="Whisky">
+            <h3>Ballantine's</h3>
+            <p>$22.00</p>
+            <button onclick="agregarCarrito('Ballantines',22.00,'img/whisky2.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/whisky3.jpg" alt="Whisky">
+            <h3>Black & White</h3>
+            <p>$6.00</p>
+            <button onclick="agregarCarrito('Black&White',6.00,'img/whisky3.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/whisky4.jpg" alt="Whisky">
+            <h3>Buchanans</h3>
+            <p>$54.00</p>
+            <button onclick="agregarCarrito('Buchanan',54.00,'img/whisky4.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/whisky5.jpg" alt="Whisky">
+            <h3>Old Parr 12 Años</h3>
+            <p>$48.00</p>
+            <button onclick="agregarCarrito('Old Parr 12 Años',48.00,'img/whisky5.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/ron1.jpg" alt="Ron">
+            <h3>Miguel Silver Ron Blanco</h3>
+            <p>$9.00</p>
+            <button onclick="agregarCarrito('Miguel Silver Ron Blanco',9.00,'img/ron1.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/ron2.jpg" alt="Ron">
+            <h3>San Miguel Gold Ron</h3>
+            <p>$8.00</p>
+            <button onclick="agregarCarrito('San Miguel Gold Ron',8.00,'img/ron2.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/vodka1.jpg" alt="Vodka">
+            <h3>Vodka Absolut</h3>
+            <p>$15.00</p>
+            <button onclick="agregarCarrito('Vodka Absolut',15.00,'img/vodka1.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/vodka2.jpg" alt="Vodka">
+            <h3>Smirnoff</h3>
+            <p>$17.00</p>
+            <button onclick="agregarCarrito('Smirnoff',17.00,'img/vodka2.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/tequila1.jpg" alt="Tequila">
+            <h3>Gran Malo</h3>
+            <p>$25.00</p>
+            <button onclick="agregarCarrito('Gran Malo',25.00,'img/tequila1.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/tequila2.jpg" alt="Tequila">
+            <h3>Canijo Silver</h3>
+            <p>$16.00</p>
+            <button onclick="agregarCarrito('Canijo Silver',16.00,'img/tequila2.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/tequila3.jpg" alt="Tequila">
+            <h3>Katrina Cannabis</h3>
+            <p>$6.00</p>
+            <button onclick="agregarCarrito('Katrina Cannabis',6.00,'img/tequila3.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/tequila4.jpg" alt="Tequila">
+            <h3>Katrina Pink</h3>
+            <p>$6.00</p>
+            <button onclick="agregarCarrito('Katrina Pink',6.00,'img/tequila4.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/tequila5.jpg" alt="Tequila">
+            <h3>José Cuervo</h3>
+            <p>$15.00</p>
+            <button onclick="agregarCarrito('José Cuervo',15.00,'img/tequila5.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/aguardiente1.jpg" alt="Aguardiente">
+            <h3>Monte Carlo</h3>
+            <p>$10.00</p>
+            <button onclick="agregarCarrito('Monte Carlo',10.00,'img/aguardiente1.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/aguardiente2.jpg" alt="Aguardiente">
+            <h3>Zhumir</h3>
+            <p>$6.00</p>
+            <button onclick="agregarCarrito('Zhumir',6.00,'img/aguardiente2.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/aguardiente3.jpg" alt="Aguardiente">
+            <h3>Cristal</h3>
+            <p>$44.00</p>
+            <button onclick="agregarCarrito('Cristal',44.00,'img/aguardiente3.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/aguardiente4.jpg" alt="Aguardiente">
+            <h3>Pájaro Azul</h3>
+            <p>$4.00</p>
+            <button onclick="agregarCarrito('Pájaro Azul',4.00,'img/aguardiente4.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/aguardiente5.jpg" alt="Aguardiente">
+            <h3>Canta Claro</h3>
+            <p>$6.00</p>
+            <button onclick="agregarCarrito('Canta Claro',6.00,'img/aguardiente5.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/aguardiente6.jpg" alt="Aguardiente">
+            <h3>Antioqueño</h3>
+            <p>$10.00</p>
+            <button onclick="agregarCarrito('Antioqueño',10.00,'img/aguardiente6.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="img/ginebra1.jpg" alt="Ginebra">
+            <h3>London Dry Gin</h3>
+            <p>$50.00</p>
+            <button onclick="agregarCarrito('London Dry Gin',50.00,'img/ginebra1.jpg')">
+                Agregar al carrito
+            </button>
+        </div>
+
+    </div>
+
+</section>
+<footer>
+    <p>© 2026 Licorera St. Patrick</p>
+</footer>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licorera St. Patrick</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+<header>
+    <div class="container nav-container">
+
+        <div class="brand">
+            <img src="img/logo.png" alt="Logo">
+            <h1>Licorera St. Patrick express</h1>
+
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="vinos.html">Vinos</a></li>
+                <li><a href="licores.html">Licores</a></li>
+                <li><a href="cervezas.html">Cervezas</a></li>
+                <li><a href="cocteles.html">Cócteles Preparados</a></li>
+                <li><a href="sin-alcohol.html">Bebidas sin alcohol</a></li>
+                <li><a href="snacks.html">Snacks</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h2>La mejor experiencia en bebidas premium</h2>
+        <p>Vinos, licores, cervezas y más para tus mejores momentos.</p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+    <div class="about-text">
+        <h2>Te ofrecemos</h2>
+        <p>Bebidas premium, atención de calidad y una experiencia moderna</p>
+    </div>
+</section>
+
+<!-- BOTÓN CARRITO -->
+<button class="cart-btn" onclick="toggleCarrito()">
+    🛒 Ver carrito
+</button>
+
+
+<!-- SECCIÓN MÉTODOS DE PAGO Y CONTACTO -->
+<section class="info-pago">
+    <div class="container">
+        <h2>💳 Métodos de Pago</h2>
+
+        <div class="metodos">
+            <div class="metodo">
+                <h3>Efectivo</h3>
+                <p>Paga al recibir tu pedido.</p>
+            </div>
+
+            <div class="metodo">
+                <h3>Ahorita</h3>
+                <p>Transferencia bancaria.</p>
+            </div>
+
+            <div class="metodo">
+                <h3>De Una</h3>
+                <p>Pago rápido desde tu celular.</p>
+            </div>
+        </div>
+
+
+        <h2>📞 Contáctanos</h2>
+        <div class="redes">
+            <a href="#" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#" target="_blank">
+                <i class="fa-brands fa-facebook"></i> Facebook
+            </a>
+            <a href="#" target="_blank">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Licorera St. Patrick</p>
+</footer>
+
+
+<!-- ✅ AQUÍ ES DONDE PONES EL CÓDIGO DEL PANEL DEL CARRITO -->
+<!-- Panel del Carrito -->
+<div id="panel-carrito" class="cart-panel">
+    <h2>Tu Carrito</h2>
+
+    <!-- Aquí aparecen los productos agregados -->
+    <div id="lista-carrito"></div>
+
+    <!-- Aquí aparece el precio total -->
+    <div id="total"></div>
+
+    <!-- Botón para cerrar -->
+    <button onclick="toggleCarrito()">Cerrar</button>
+</div>
+<!-- ✅ FIN DEL CÓDIGO DEL CARRITO -->
+
+
+<script src="js/app.js"></script>
+</body>
+</html>
