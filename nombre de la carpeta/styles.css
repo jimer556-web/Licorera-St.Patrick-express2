@@ -1,0 +1,839 @@
+/* ==============================================
+✅ ESTILO UNIFICADO - TODO IGUAL, PROPORCIONAL Y UNO AL LADO DEL OTRO
+✅ SIN SUBRAYADOS | ✅ TÍTULOS EN BLANCO | ✅ IMÁGENES CENTRADAS
+============================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important; /* Elimina cualquier línea/subrayado */
+}
+
+html, body {
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0f0f;
+    color: #ffffff;
+}
+
+/* CONTENEDOR GENERAL - TODO QUEDA DENTRO Y ALINEADO */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==============================================
+   ENCABEZADO Y NAVEGACIÓN
+============================================== */
+header {
+    background-color: #111;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* 🔹 Evita que se bajen los elementos */
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand img {
+    width: 50px;
+    height: auto;
+}
+
+.brand h1 {
+    color: #1db954;
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex; /* 🔹 OBLIGA a que estén UNO AL LADO DEL OTRO */
+    gap: 20px;
+    list-style: none;
+    flex-wrap: nowrap; /* 🔹 NINGUNO SE BAJA */
+}
+
+nav a {
+    color: #ffffff !important; /* Blanco siempre */
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #1db954;
+}
+
+/* ==============================================
+   BOTONES DE NAVEGACIÓN
+============================================== */
+.nav-buttons {
+    display: flex; /* 🔹 UNO AL LADO DEL OTRO */
+    justify-content: space-between;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: nowrap; /* 🔹 NO SE BAJAN */
+}
+
+.nav-btn {
+    min-width: 110px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.back-btn {
+    background: linear-gradient(135deg, #ff416c, #ff9800);
+    box-shadow: 0 0 12px rgba(255, 65, 108, 0.4);
+}
+
+.next-btn {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    box-shadow: 0 0 12px rgba(0, 114, 255, 0.4);
+}
+
+.nav-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ==============================================
+   SECCIÓN PRINCIPAL / HERO
+============================================== */
+.hero {
+    position: relative;
+    height: 85vh;
+    background: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.65);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    color: #ffffff !important; /* Blanco */
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 19px;
+    color: #ffffff !important; /* Blanco */
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #1db954;
+    color: white !important;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(29, 185, 84, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+/* ==============================================
+   ✅ CATEGORÍAS - TODAS IGUALES, MISMA PROPORCIÓN, UNO AL LADO DE OTRA
+============================================== */
+.categories {
+    padding: 20px 0 40px;
+}
+
+.categories h2 {
+    color: #ffffff !important;
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+/* 🔹 CONTENEDOR: OBLIGA A QUE ESTÉN TODOS EN LÍNEA, UNO AL LADO DEL OTRO */
+.category-grid {
+    width: 100%;
+    text-align: center; /* 🔹 ALINEACIÓN PERFECTA */
+    font-size: 0; /* 🔹 ELIMINA ESPACIOS ENTRE CAJAS */
+}
+
+/* 🔹 TODAS LAS TARJETAS DE CATEGORÍA SON EXACTAMENTE IGUALES */
+.card {
+    display: inline-block; /* 🔹 CLAVE: UNO AL LADO DEL OTRO SIEMPRE */
+    width: 140px; /* 🔹 MISMO ANCHO PARA TODAS */
+    height: 160px; /* 🔹 MISMA ALTURA PARA TODAS - MISMA PROPORCIÓN */
+    background-color: #171717;
+    border-radius: 12px;
+    padding: 15px 10px;
+    margin: 0 10px 15px; /* Espacio entre ellas */
+    border: 1px solid #222;
+    transition: all 0.3s ease;
+    vertical-align: top;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #1db954;
+    box-shadow: 0 6px 15px rgba(29, 185, 84, 0.25);
+    background-color: #1e1e1e;
+}
+
+/* 🔹 IMÁGENES DE CATEGORÍA: TODAS IGUALES, CENTRADAS, MISMA MEDIDA */
+.card img {
+    width: 70px; /* 🔹 MISMO TAMAÑO */
+    height: 70px; /* 🔹 MISMA ALTURA = MISMA PROPORCIÓN */
+    object-fit: contain; /* 🔹 NO SE DEFORMAN */
+    display: block;
+    margin: 0 auto 10px; /* 🔹 CENTRADO ABSOLUTO */
+}
+
+.card h3 {
+    color: #ffffff !important; /* 🔹 TÍTULO BLANCO */
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* ==============================================
+   ✅ PRODUCTOS / COCTELES - TODOS IGUALES, UNO AL LADO DE OTRO
+============================================== */
+.productos-contenedor {
+    width: 100%;
+    text-align: center; /* 🔹 ALINEACIÓN GENERAL */
+    font-size: 0; /* 🔹 QUITA ESPACIOS INDESEADOS ENTRE CAJAS */
+    padding: 10px 0 40px;
+}
+
+/* 🔹 TODOS LOS PRODUCTOS TIENEN EL MISMO TAMAÑO Y FORMA */
+.producto {
+    display: inline-block; /* 🔹 UNO AL LADO DEL OTRO - INCLUSO SI HAY MUCHO */
+    width: 145px; /* 🔹 TAMAÑO FIJO Y COMPACTO */
+    height: auto;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 0 10px 15px;
+    border: 1px solid #2a2a2a;
+    transition: all 0.3s ease;
+    vertical-align: top;
+    text-align: center;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+    background-color: #202020;
+}
+
+/* 🔹 IMÁGENES DE PRODUCTOS: MISMA MEDIDA, CENTRADAS, PROPORCIÓN PERFECTA */
+.producto img {
+    width: 100%;
+    height: 140px; /* 🔹 MISMA ALTURA PARA TODOS */
+    object-fit: cover; /* 🔹 SE VEN BIEN, SIN DEFORMAR */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* 🔹 CENTRADO */
+}
+
+.producto h3 {
+    font-size: 15px;
+    color: #d4af37 !important; /* Dorado */
+    font-weight: 600;
+    margin: 6px 0;
+}
+
+.producto p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff !important; /* Blanco */
+    margin: 6px 0 10px;
+}
+
+.producto button {
+    width: 100%;
+    padding: 8px 5px;
+    background: linear-gradient(135deg, #ff9800, #e65100);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.producto button:hover {
+    transform: scale(1.03);
+}
+
+/* ==============================================
+   MODAL DE EDAD
+============================================== */
+.age-modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background-color: #161616;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 420px;
+    border: 1px solid #1db954;
+    box-shadow: 0 0 30px rgba(29, 185, 84, 0.35);
+}
+
+.modal-content h2 {
+    color: #1db954 !important;
+    margin-bottom: 12px;
+}
+
+.modal-content p {
+    color: #ffffff !important;
+    margin-bottom: 18px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    outline: none;
+    font-size: 15px;
+    background-color: #222;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.buttons button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #1db954;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.buttons .secondary-btn {
+    background-color: #333 !important;
+}
+
+.buttons button:hover {
+    transform: scale(1.05);
+}
+
+.error {
+    color: #ff4444;
+    margin-top: 12px;
+}
+
+/* ==============================================
+   CARRITO DE COMPRAS
+============================================== */
+.cart-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: white !important;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    z-index: 1000;
+    font-size: 14px;
+}
+
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -360px;
+    width: 340px;
+    height: 100%;
+    background-color: #0f0f0f;
+    color: white;
+    padding: 20px;
+    transition: 0.35s ease-in-out;
+    z-index: 999;
+    overflow-y: auto;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    border-left: 2px solid #333;
+}
+
+.cart-panel.active {
+    right: 0;
+}
+
+.cart-panel h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffd700 !important;
+    font-size: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+#total {
+    margin-top: 20px;
+    text-align: center;
+    color: #00ff88 !important;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.cart-panel button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #ff3333;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ==============================================
+   PIE DE PÁGINA
+============================================== */
+footer {
+    background-color: #0a0a0a;
+    padding: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* ==============================================
+   📱 RESPONSIVE - EN CELULARES TAMBIÉN IGUALES
+============================================== */
+@media (max-width: 768px) {
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    /* En móviles siguen al lado, solo cambia el tamaño */
+    .card {
+        width: 110px;
+        height: 140px;
+        margin: 0 5px 10px;
+    }
+
+    .card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .producto {
+        width: 130px;
+        margin: 0 5px 10px;
+    }
+
+    .producto img {
+        height: 120px;
+    }
+}
+/* ==============================================
+   ✅ ESTILO CENTRADO PARA MÉTODOS DE PAGO Y CONTACTO
+============================================== */
+
+.info-pago {
+    background-color: #0f0f0f;
+    padding: 40px 20px;
+    text-align: center; /* 🔥 TODO CENTRADO */
+}
+
+.info-pago h2 {
+    color: #ffffff !important;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+/* Línea decorativa debajo del título */
+.info-pago h2::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    background-color: #1db954;
+    bottom: -6px;
+    left: 20%;
+    border-radius: 2px;
+}
+
+/* Contenedor de los métodos en fila y centrado */
+.metodos {
+    display: flex;
+    justify-content: center; /* 🔥 CENTRADO HORIZONTAL */
+    align-items: flex-start;
+    gap: 40px; /* Espacio entre cada método */
+    flex-wrap: wrap; /* Para que en celulares se acomode bien */
+    margin-bottom: 50px;
+}
+/* Contenedor de productos */
+.grid-productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+/* Tarjetas de productos */
+.producto{
+    width: 220px;
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+/* Centrar imágenes */
+.producto img{
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #444;
+}
+
+/* Títulos */
+.producto h3{
+    margin-top: 12px;
+    color: #fff;
+}
+
+/* Precio */
+.producto p{
+    color: gold;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+/* Botón */
+.producto button{
+    background: gold;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.producto button:hover{
+    background: #ffd700;
+}
+/* Cada tarjeta de método */
+.metodo {
+    background-color: #1a1a1a;
+    padding: 20px 25px;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    min-width: 160px;
+    transition: 0.3s;
+}
+
+.metodo:hover {
+    transform: translateY(-4px);
+    border-color: #1db954;
+    box-shadow: 0 4px 12px rgba(29, 185, 84, 0.15);
+}
+
+.metodo h3 {
+    color: #d4af37 !important; /* Dorado elegante */
+    font-size: 17px;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.metodo p {
+    color: #cccccc !important;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* Enlaces de Redes Sociales CENTRADOS */
+.redes {
+    display: flex;
+    justify-content: center; /* 🔥 CENTRADOS */
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.redes a {
+    color: #ffffff !important;
+    font-size: 15px;
+    text-decoration: none !important; /* Sin línea */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.3s;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.redes a:hover {
+    color: #1db954 !important;
+    background-color: #1a1a1a;
+}
+
+.redes i {
+    font-size: 18px;
+}
+
+/* 📱 Responsive: En celulares se ponen uno debajo del otro */
+@media (max-width: 600px) {
+    .metodos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redes {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+/* ✅ ESTILOS DEL BOTÓN DEL CARRITO */
+.cart-btn {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    background: linear-gradient(135deg, #1db954, #169c46);
+    color: white !important;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.cart-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ✅ ESTILOS DEL PANEL DEL CARRITO */
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -380px; /* 👈 Empieza OCULTO a la derecha */
+    width: 350px;
+    height: 100vh;
+    background-color: #111111;
+    color: white;
+    padding: 20px;
+    transition: right 0.4s ease; /* 👈 Animación suave */
+    z-index: 10000;
+    overflow-y: auto;
+    border-left: 2px solid #1db954;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+}
+
+/* ✅ ESTO ES LO QUE LO MUESTRA: cuando tiene la clase 'activo' */
+.cart-panel.activo {
+    right: 0; /* 👈 Aparece aquí */
+}
+
+/* ✅ ESTILO DE LOS PRODUCTOS DENTRO DEL CARRITO */
+.carrito-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 8px 0;
+    border: 1px solid #333;
+}
+
+.carrito-item img {
+    width: 50px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.carrito-item h4 {
+    font-size: 14px;
+    color: #d4af37;
+    margin: 0 0 4px 0;
+}
+
+.carrito-item p {
+    font-size: 13px;
+    color: #ccc;
+    margin: 0;
+}
+
+/* ✅ TOTAL Y BOTÓN CERRAR */
+#total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1db954;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    background: #1a1a1a;
+    border-radius: 8px;
+}
+
+.cart-panel button:last-child {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: #ff3333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cart-panel button:last-child:hover {
+    background: #e60000;
+}
+/* Contenedor de productos */
+.categories{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 30px;
+}
+
+/* Tarjeta de producto */
+.producto{
+    width: 250px;
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Imagen centrada y completa */
+.producto img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 220px;
+
+    /* Muestra la imagen completa */
+    object-fit: contain;
+
+    border-radius: 10px;
+    background: #fff;
+    padding: 5px;
+}
+
+/* Nombre */
+.producto h3{
+    margin-top: 12px;
+    color: white;
+}
+
+/* Precio */
+.producto p{
+    color: gold;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Botón */
+.producto button{
+    width: 100%;
+    padding: 10px;
+    background: gold;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.producto button:hover{
+    background: #ffd700;
+}
